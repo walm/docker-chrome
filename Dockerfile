@@ -26,7 +26,7 @@ RUN useradd -m google-chrome; \
                                                   libxss1 \
                                                   libxtst6 \
                                                   xdg-utils \
-                                                  google-chrome-stable=55.0.2883.87-1 \
+                                                  google-chrome-stable=58.0.3029.96-1 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY start-google-chrome.sh /usr/local/bin/

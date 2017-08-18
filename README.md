@@ -1,7 +1,9 @@
 # Google Chrome
 
-Unofficial build of Google Chrome 55 running within a docker container and
+Unofficial build of Google Chrome 60 running within a docker container and
 rendered by the local X Server.
+
+It's a fork from original https://github.com/chrisdaish/docker-chrome
 
 ## Changelog
 
@@ -39,7 +41,7 @@ docker run  -v $HOME/Downloads:/home/google-chrome/Downloads:rw \
             -e DISPLAY=unix$DISPLAY \
             --rm \
             --name google-chrome \
-            chrisdaish/google-chrome
+            walm/google-chrome
 ```
 
 ## FAQ

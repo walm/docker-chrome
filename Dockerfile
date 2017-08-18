@@ -1,13 +1,13 @@
 FROM ubuntu:14.04.3
 
-MAINTAINER Chris Daish <chrisdaish@gmail.com>
+MAINTAINER Andreas Wålm <andreas@walm.net>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 COPY AptSources /etc/apt/sources.list.d/
 
 RUN useradd -m google-chrome; \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A040830F7FAC5991 \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1397BC53640DB551 \
     && apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates \
                                                   gconf-service \
@@ -26,7 +26,7 @@ RUN useradd -m google-chrome; \
                                                   libxss1 \
                                                   libxtst6 \
                                                   xdg-utils \
-                                                  google-chrome-stable=58.0.3029.96-1 \
+                                                  google-chrome-stable=60.0.3112.101-1 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY start-google-chrome.sh /usr/local/bin/
